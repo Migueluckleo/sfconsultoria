@@ -1,0 +1,28 @@
+body {
+    font-family: 'Lato', sans-serif;
+}
+h1 {
+    font-size: 40px;
+    font-weight: bold;
+    font-family: 'Lato', sans-serif;
+}
+
+.hero {
+    height: 600px; /* Desktop */
+}
+
+@media (max-width: 768px) {
+    .hero {
+        height: auto; /* Ajusta en móviles */
+        min-height: 400px; /* Si quieres un mínimo de altura */
+    }
+}
+.hero-text {
+    padding-left: 6%; /* Aplica 6% de padding-left */
+}
+
+@media (max-width: 768px) {
+    .hero-text {
+        padding-left: 4%; /* Un poco menos de padding en móviles */
+    }
+}
