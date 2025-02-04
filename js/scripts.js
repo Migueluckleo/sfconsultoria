@@ -45,3 +45,52 @@ document.addEventListener("DOMContentLoaded", function () {
         observer.observe(counter);
     });
 });
+document.addEventListener("DOMContentLoaded", function () {
+    const testimonials = document.querySelectorAll(".testimonial");
+    const prevButton = document.getElementById("prevButton");
+    const nextButton = document.getElementById("nextButton");
+    let currentIndex = 0;
+
+    function showTestimonial(index) {
+        testimonials.forEach((testimonial, i) => {
+            testimonial.classList.add("hidden");
+            testimonial.classList.remove("fade-in");
+            if (i === index) {
+                testimonial.classList.remove("hidden");
+                testimonial.classList.add("fade-in");
+            }
+        });
+    }
+
+    function nextTestimonial() {
+        currentIndex = (currentIndex + 1) % testimonials.length;
+        showTestimonial(currentIndex);
+    }
+
+    function prevTestimonial() {
+        currentIndex = (currentIndex - 1 + testimonials.length) % testimonials.length;
+        showTestimonial(currentIndex);
+    }
+
+    nextButton.addEventListener("click", nextTestimonial);
+    prevButton.addEventListener("click", prevTestimonial);
+
+    // Cambiar automáticamente cada 8 segundos
+    setInterval(nextTestimonial, 8000);
+
+    // Mostrar el primer testimonial al cargar la página
+    showTestimonial(currentIndex);
+});
+document.addEventListener("DOMContentLoaded", function () {
+    const quoteSection = document.querySelector(".quote-section");
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("opacity-100", "translate-y-0");
+            }
+        });
+    }, { threshold: 0.6 }); // Se activa cuando el 60% de la sección está en pantalla
+
+    observer.observe(quoteSection);
+});
