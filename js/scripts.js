@@ -82,15 +82,17 @@ document.addEventListener("DOMContentLoaded", function () {
     showTestimonial(currentIndex);
 });
 document.addEventListener("DOMContentLoaded", function () {
-    const quoteSection = document.querySelector(".quote-section");
-
-    const observer = new IntersectionObserver((entries) => {
+    const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add("opacity-100", "translate-y-0");
+                observer.unobserve(entry.target); // Detener observación tras activarse
             }
         });
-    }, { threshold: 0.6 }); // Se activa cuando el 60% de la sección está en pantalla
+    }, { threshold: 0.5 });
 
-    observer.observe(quoteSection);
+    document.querySelectorAll(".fade-in").forEach(element => {
+        element.classList.add("opacity-0", "translate-y-10", "transition-all", "duration-1000", "ease-in-out");
+        observer.observe(element);
+    });
 });

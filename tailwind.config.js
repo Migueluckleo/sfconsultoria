@@ -14,4 +14,10 @@ module.exports = {
   plugins: [],
 };
 
-S
+Smodule.exports = {
+  content: ["./*.html"],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+};
