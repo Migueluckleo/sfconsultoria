@@ -12,49 +12,48 @@
     
     <body class="bg-gray-100">
         <!-- Navbar -->
-        <header class="bg-white shadow-md">
-            <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-                <!-- Logo -->
-                <a href="#" class="flex items-center">
-                    <img src="https://res.cloudinary.com/ddejohivw/image/upload/fl_preserve_transparency/v1738714710/logotipo_1_zuqzdj.jpg?_s=public-apps" alt="SF Consultoría" class="h-10 md:h-[80px]">
-                </a>
-                
-    
-                <!-- Menú de Navegación (Escritorio) -->
-                <nav class="hidden md:flex space-x-6">
-                    <a href="#" class="text-gray-700 hover:text-[#118597]">Inicio</a>
-                    <a href="#" class="text-gray-700 hover:text-[#118597]">Servicios</a>
-                    <a href="#" class="text-gray-700 hover:text-[#118597]">Industrias</a>
-                    <a href="#" class="text-gray-700 hover:text-[#118597]">Blog</a>
-                    <a href="#" class="text-gray-700 hover:text-[#118597]">Facturación</a>
-                </nav>
-    
-                <!-- Íconos Sociales -->
-                <div class="hidden md:flex space-x-4">
-                    <a href="#" class="text-gray-600 hover:text-[#118597]">
-                        <i class="ri-linkedin-box-fill text-xl"></i>
-                    </a>
-                    <a href="#" class="text-gray-600 hover:text-[#118597]">
-                        <i class="ri-user-line text-xl"></i>
-                    </a>
-                </div>
-    
-                <!-- Botón de Menú Móvil -->
-                <button id="mobile-menu-btn" class="md:hidden text-gray-700">
-                    <i class="ri-menu-line text-2xl"></i>
-                </button>
-            </div>
-    
-            <!-- Menú Móvil -->
-            <nav id="mobile-menu" class="hidden bg-white p-4 space-y-2 md:hidden">
-                <a href="#" class="block text-gray-700 hover:text-[#118597]">Inicio</a>
-                <a href="#" class="block text-gray-700 hover:text-[#118597]">Servicios</a>
-                <a href="#" class="block text-gray-700 hover:text-[#118597]">Industrias</a>
-                <a href="#" class="block text-gray-700 hover:text-[#118597]">Blog</a>
-                <a href="#" class="block text-gray-700 hover:text-[#118597]">Facturación</a>
-            </nav>
-        </header>
-        
+<header id="navbar" class="bg-white shadow-md fixed top-0 left-0 w-full transition-transform duration-300 z-50">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <!-- Logo -->
+        <a href="#" class="flex items-center">
+            <img src="https://res.cloudinary.com/ddejohivw/image/upload/fl_preserve_transparency/v1738714710/logotipo_1_zuqzdj.jpg?_s=public-apps" alt="SF Consultoría" class="h-10 md:h-[80px]">
+        </a>
+
+        <!-- Menú de Navegación (Escritorio) -->
+        <nav class="hidden md:flex space-x-6">
+            <a href="#" class="text-gray-700 hover:text-[#118597]">Inicio</a>
+            <a href="#" class="text-gray-700 hover:text-[#118597]">Servicios</a>
+            <a href="#" class="text-gray-700 hover:text-[#118597]">Industrias</a>
+            <a href="#" class="text-gray-700 hover:text-[#118597]">Blog</a>
+            <a href="#" class="text-gray-700 hover:text-[#118597]">Facturación</a>
+        </nav>
+
+        <!-- Íconos Sociales -->
+        <div class="hidden md:flex space-x-4">
+            <a href="#" class="text-gray-600 hover:text-[#118597]">
+                <i class="ri-linkedin-box-fill text-xl"></i>
+            </a>
+            <a href="#" class="text-gray-600 hover:text-[#118597]">
+                <i class="ri-user-line text-xl"></i>
+            </a>
+        </div>
+
+        <!-- Botón de Menú Móvil -->
+        <button id="mobile-menu-btn" class="md:hidden text-gray-700">
+            <i class="ri-menu-line text-2xl"></i>
+        </button>
+    </div>
+
+    <!-- Menú Móvil -->
+    <nav id="mobile-menu" class="hidden bg-white p-4 space-y-2 md:hidden">
+        <a href="#" class="block text-gray-700 hover:text-[#118597]">Inicio</a>
+        <a href="#" class="block text-gray-700 hover:text-[#118597]">Servicios</a>
+        <a href="#" class="block text-gray-700 hover:text-[#118597]">Industrias</a>
+        <a href="#" class="block text-gray-700 hover:text-[#118597]">Blog</a>
+        <a href="#" class="block text-gray-700 hover:text-[#118597]">Facturación</a>
+    </nav>
+</header>
+
         <!-- Hero Section -->
         <section class="relative bg-gray-100 py-20 px-6 bg-cover bg-center bg-no-repeat hero" 
          style="background-image: url('https://res.cloudinary.com/ddejohivw/image/upload/fl_preserve_transparency/v1738700436/businessman-saving-money-with-piggy-bank-and-coins-2024-06-11-20-40-30-utc_pffkut.jpg');">

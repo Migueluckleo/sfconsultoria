@@ -1,5 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // ✅ Funcionalidad del Menú Móvil
+    /** =========================================
+     * ✅ 1. Menú Móvil (Toggle)
+     * ========================================= */
     const mobileMenuBtn = document.getElementById("mobile-menu-btn");
     const mobileMenu = document.getElementById("mobile-menu");
 
@@ -8,20 +10,22 @@ document.addEventListener("DOMContentLoaded", function () {
             mobileMenu.classList.toggle("hidden");
         });
     } else {
-        console.error("No se encontraron los elementos del menú.");
+        console.error("❌ No se encontraron los elementos del menú móvil.");
     }
 
-    // ✅ Animación de Contadores con Símbolos
+    /** =========================================
+     * ✅ 2. Animación de Contadores con Símbolos
+     * ========================================= */
     const counters = document.querySelectorAll(".counter");
     const speed = 200; // Ajusta la velocidad de la animación
 
-    const observer = new IntersectionObserver((entries, observer) => {
+    const counterObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 const counter = entry.target;
                 const target = parseInt(counter.getAttribute("data-target"), 10);
-                const suffix = counter.getAttribute("data-suffix") || ""; // Agregar sufijo si existe
-                
+                const suffix = counter.getAttribute("data-suffix") || ""; // Sufijo opcional
+
                 let count = 0;
                 const increment = target / speed;
 
@@ -31,21 +35,23 @@ document.addEventListener("DOMContentLoaded", function () {
                         counter.innerText = Math.ceil(count) + suffix;
                         setTimeout(updateCount, 30);
                     } else {
-                        counter.innerText = target + suffix; // Agregar sufijo al final
+                        counter.innerText = target + suffix; // Mostrar valor final con sufijo
                     }
                 };
 
                 updateCount();
-                observer.unobserve(counter); // Detiene la animación una vez ejecutada
+                observer.unobserve(counter); // Detener observación tras activarse
             }
         });
     }, { threshold: 0.5 });
 
     counters.forEach(counter => {
-        observer.observe(counter);
+        counterObserver.observe(counter);
     });
-});
-document.addEventListener("DOMContentLoaded", function () {
+
+    /** =========================================
+     * ✅ 3. Carrusel de Testimonios con Animación
+     * ========================================= */
     const testimonials = document.querySelectorAll(".testimonial");
     const prevButton = document.getElementById("prevButton");
     const nextButton = document.getElementById("nextButton");
@@ -57,7 +63,7 @@ document.addEventListener("DOMContentLoaded", function () {
             testimonial.classList.remove("fade-in");
             if (i === index) {
                 testimonial.classList.remove("hidden");
-                testimonial.classList.add("fade-in");
+                testimonial.classList.add("fade-in"); // Aplicar animación CSS
             }
         });
     }
@@ -72,17 +78,21 @@ document.addEventListener("DOMContentLoaded", function () {
         showTestimonial(currentIndex);
     }
 
-    nextButton.addEventListener("click", nextTestimonial);
-    prevButton.addEventListener("click", prevTestimonial);
+    if (prevButton && nextButton) {
+        nextButton.addEventListener("click", nextTestimonial);
+        prevButton.addEventListener("click", prevTestimonial);
+    }
 
-    // Cambiar automáticamente cada 8 segundos
+    // Cambio automático cada 8 segundos
     setInterval(nextTestimonial, 8000);
 
     // Mostrar el primer testimonial al cargar la página
     showTestimonial(currentIndex);
-});
-document.addEventListener("DOMContentLoaded", function () {
-    const observer = new IntersectionObserver((entries, observer) => {
+
+    /** =========================================
+     * ✅ 4. Animación de Aparición en Scroll
+     * ========================================= */
+    const fadeObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add("opacity-100", "translate-y-0");
@@ -93,6 +103,26 @@ document.addEventListener("DOMContentLoaded", function () {
 
     document.querySelectorAll(".fade-in").forEach(element => {
         element.classList.add("opacity-0", "translate-y-10", "transition-all", "duration-1000", "ease-in-out");
-        observer.observe(element);
+        fadeObserver.observe(element);
+    });
+
+    /** =========================================
+     * ✅ 5. Ocultar Navbar al hacer Scroll Down y Mostrar al hacer Scroll Up
+     * ========================================= */
+    let lastScrollTop = 0;
+    const navbar = document.getElementById("navbar");
+
+    window.addEventListener("scroll", function () {
+        let currentScroll = window.scrollY;
+
+        if (currentScroll > lastScrollTop && currentScroll > 50) {
+            // Ocultar navbar en scroll down
+            navbar.classList.add("-translate-y-full");
+        } else {
+            // Mostrar navbar en scroll up
+            navbar.classList.remove("-translate-y-full");
+        }
+
+        lastScrollTop = currentScroll;
     });
 });
