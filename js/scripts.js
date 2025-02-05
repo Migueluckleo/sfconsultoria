@@ -147,3 +147,16 @@ document.addEventListener("DOMContentLoaded", function () {
         })
         .catch(error => console.error("Error al cargar la navbar:", error));
 });
+    /** =========================================
+     * ✅ Cargar Footer Universal
+     * ========================================= */
+    const footerContainer = document.getElementById("footer-container");
+
+    if (footerContainer) {
+        fetch("footer.html")
+            .then(response => response.text())
+            .then(data => {
+                footerContainer.innerHTML = data;
+            })
+            .catch(error => console.error("Error al cargar el footer:", error));
+    }
