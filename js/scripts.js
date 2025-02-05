@@ -2,29 +2,31 @@ document.addEventListener("DOMContentLoaded", function () {
     /** =========================================
      * ✅ 1. Menú Móvil (Toggle)
      * ========================================= */
-    const mobileMenuBtn = document.getElementById("mobile-menu-btn");
-    const mobileMenu = document.getElementById("mobile-menu");
+    function activarMenuMovil() {
+        const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+        const mobileMenu = document.getElementById("mobile-menu");
 
-    if (mobileMenuBtn && mobileMenu) {
-        mobileMenuBtn.addEventListener("click", function () {
-            mobileMenu.classList.toggle("hidden");
-        });
-    } else {
-        console.error("❌ No se encontraron los elementos del menú móvil.");
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener("click", function () {
+                mobileMenu.classList.toggle("hidden");
+            });
+        } else {
+            console.error("❌ No se encontraron los elementos del menú móvil.");
+        }
     }
 
     /** =========================================
      * ✅ 2. Animación de Contadores con Símbolos
      * ========================================= */
     const counters = document.querySelectorAll(".counter");
-    const speed = 200; // Ajusta la velocidad de la animación
+    const speed = 200;
 
     const counterObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 const counter = entry.target;
                 const target = parseInt(counter.getAttribute("data-target"), 10);
-                const suffix = counter.getAttribute("data-suffix") || ""; // Sufijo opcional
+                const suffix = counter.getAttribute("data-suffix") || "";
 
                 let count = 0;
                 const increment = target / speed;
@@ -35,12 +37,12 @@ document.addEventListener("DOMContentLoaded", function () {
                         counter.innerText = Math.ceil(count) + suffix;
                         setTimeout(updateCount, 30);
                     } else {
-                        counter.innerText = target + suffix; // Mostrar valor final con sufijo
+                        counter.innerText = target + suffix;
                     }
                 };
 
                 updateCount();
-                observer.unobserve(counter); // Detener observación tras activarse
+                observer.unobserve(counter);
             }
         });
     }, { threshold: 0.5 });
@@ -63,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
             testimonial.classList.remove("fade-in");
             if (i === index) {
                 testimonial.classList.remove("hidden");
-                testimonial.classList.add("fade-in"); // Aplicar animación CSS
+                testimonial.classList.add("fade-in");
             }
         });
     }
@@ -83,10 +85,7 @@ document.addEventListener("DOMContentLoaded", function () {
         prevButton.addEventListener("click", prevTestimonial);
     }
 
-    // Cambio automático cada 8 segundos
     setInterval(nextTestimonial, 8000);
-
-    // Mostrar el primer testimonial al cargar la página
     showTestimonial(currentIndex);
 
     /** =========================================
@@ -96,7 +95,7 @@ document.addEventListener("DOMContentLoaded", function () {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add("opacity-100", "translate-y-0");
-                observer.unobserve(entry.target); // Detener observación tras activarse
+                observer.unobserve(entry.target);
             }
         });
     }, { threshold: 0.5 });
@@ -106,31 +105,45 @@ document.addEventListener("DOMContentLoaded", function () {
         fadeObserver.observe(element);
     });
 
- 
-        /** =========================================
-         * ✅ Ocultar Navbar en Scroll Down y Mostrar en Scroll Up
-         * ========================================= */
+    /** =========================================
+     * ✅ Ocultar Navbar en Scroll Down y Mostrar en Scroll Up
+     * ========================================= */
+    function activarScrollNavbar() {
         let lastScrollTop = 0;
         const navbar = document.getElementById("navbar");
+
+        if (!navbar) return;
 
         window.addEventListener("scroll", function () {
             let currentScroll = window.scrollY;
 
-            if (currentScroll > 100) { // Se oculta solo si bajaste 100px o más
+            if (currentScroll > 100) {
                 if (currentScroll > lastScrollTop) {
-                    // Ocultar navbar en scroll down
                     navbar.classList.add("-translate-y-full");
                 } else {
-                    // Mostrar navbar en scroll up
                     navbar.classList.remove("-translate-y-full");
                 }
             } else {
-                // Asegurar que la navbar siempre sea visible cuando estamos en la parte superior
                 navbar.classList.remove("-translate-y-full");
             }
 
-            lastScrollTop = Math.max(0, currentScroll); // Evita valores negativos
+            lastScrollTop = Math.max(0, currentScroll);
         });
+    }
 
+    /** =========================================
+     * ✅ Cargar Navbar desde navbar.html y ejecutar scripts
+     * ========================================= */
+    fetch("navbar.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("navbar-container").innerHTML = data;
 
-}); // ✅ Se cierra correctamente aquí
+            // Esperamos un pequeño tiempo para asegurarnos de que la navbar ya esté en el DOM
+            setTimeout(() => {
+                activarScrollNavbar();
+                activarMenuMovil();
+            }, 100);
+        })
+        .catch(error => console.error("Error al cargar la navbar:", error));
+});
