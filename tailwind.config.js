@@ -21,3 +21,15 @@ Smodule.exports = {
   },
   plugins: [],
 };
+module.exports = {
+  theme: {
+    extend: {
+      minWidth: {
+        'btn': '150px'
+      },
+      maxWidth: {
+        'btn': '350px'
+      }
+    }
+  }
+}

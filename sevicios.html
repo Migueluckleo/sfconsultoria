@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios - SF Consultoría</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="output.css"> <!-- Estilos de Tailwind -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body class="bg-gray-100">
+
+    <!-- Navbar -->
+    <header id="navbar" class="bg-white shadow-md fixed top-0 left-0 w-full transition-transform duration-300 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="index.html" class="flex items-center">
+                <img src="https://res.cloudinary.com/ddejohivw/image/upload/fl_preserve_transparency/v1738714710/logotipo_1_zuqzdj.jpg?_s=public-apps" 
+                     alt="SF Consultoría" class="h-10 md:h-[80px]">
+            </a>
+
+            <!-- Menú de Navegación -->
+            <nav class="hidden md:flex space-x-6">
+                <a href="index.html" class="text-gray-700 hover:text-[#118597]">Inicio</a>
+                <a href="#" class="text-[#118597] font-bold">Servicios</a> <!-- Activo -->
+                <a href="#" class="text-gray-700 hover:text-[#118597]">Industrias</a>
+                <a href="#" class="text-gray-700 hover:text-[#118597]">Blog</a>
+                <a href="#" class="text-gray-700 hover:text-[#118597]">Facturación</a>
+            </nav>
+
+            <!-- Íconos Sociales -->
+            <div class="hidden md:flex space-x-4">
+                <a href="#" class="text-gray-600 hover:text-[#118597]"><i class="ri-linkedin-box-fill text-xl"></i></a>
+                <a href="#" class="text-gray-600 hover:text-[#118597]"><i class="ri-user-line text-xl"></i></a>
+            </div>
+
+            <!-- Botón de Menú Móvil -->
+            <button id="mobile-menu-btn" class="md:hidden text-gray-700">
+                <i class="ri-menu-line text-2xl"></i>
+            </button>
+        </div>
+    </header>
+
+
+<!-- Hero de Servicios -->
+<section class="relative bg-gray-100 py-20 px-6 bg-cover bg-center bg-no-repeat hero mt-[100px]"
+         style="background-image: url('https://res.cloudinary.com/ddejohivw/image/upload/fl_preserve_transparency/v1738700436/businessman-saving-money-with-piggy-bank-and-coins-2024-06-11-20-40-30-utc_pffkut.jpg');">
+
+    <div class="container mx-auto flex flex-col items-center text-center md:flex-row md:text-left md:items-center md:justify-between">
+        
+        <!-- Texto Hero -->
+        <div class="max-w-2xl bg-white bg-opacity-80 p-6 rounded-lg hero-text">
+
+            <h1 class="text-[32px] md:text-[40px] font-bold text-gray-900 leading-tight font-[Lato]">
+                Descubre Nuestros <span class="text-[#118597]">Servicios Especializados</span>
+            </h1>
+            
+            <p class="text-gray-600 text-lg mt-4">
+                Brindamos soluciones fiscales, contables y legales adaptadas a las necesidades de tu empresa.
+            </p>
+            
+          
+        </div>
+    </div>
+</section>
+<!-- Contenedor de Servicios -->
+<section class="py-16 px-6 lg:px-[8%] space-y-10">
+    
+    <!-- Servicio 1 (Fondo azul claro) -->
+    <div class="flex flex-col md:flex-row bg-[#e5eaf2] rounded-lg overflow-hidden shadow-md">
+        <img src="https://via.placeholder.com/300x200" alt="Estrategias Fiscales" class="w-full md:w-2/3 object-cover">
+        <div class="p-6 flex flex-col justify-center md:w-2/3">
+            <h3 class="text-xl font-bold text-gray-900">Estrategias Fiscales</h3>
+            <p class="text-gray-700 text-md mt-2">
+                Desarrollamos soluciones innovadoras para maximizar tus beneficios fiscales, optimizando recursos y asegurando el cumplimiento de las normativas vigentes.
+            </p>
+            <a href="#" class="btn-servicios border border-[#118597] text-[#118597] hover:bg-[#e1f3f4] transition text-center mt-4 py-2 px-4 rounded-md w-full md:w-auto min-w-[150px] max-w-[350px]">
+                Ver categoría
+            </a>
+        </div>
+    </div>
+
+    <!-- Servicio 2 (Fondo blanco) -->
+    <div class="flex flex-col md:flex-row-reverse bg-white rounded-lg overflow-hidden shadow-md">
+        <img src="https://via.placeholder.com/300x200" alt="Administraciones Nominales" class="w-full md:w-2/3 object-cover">
+        <div class="p-6 flex flex-col justify-center md:w-2/3">
+            <h3 class="text-xl font-bold text-gray-900">Administraciones Nominales / Seguridad Social</h3>
+            <p class="text-gray-700 text-md mt-2">
+                Nos ocupamos de la gestión integral de nóminas, cuotas al IMSS, trámites laborales y cumplimiento con estándares como REPSE.
+            </p>
+            <a href="#" class="btn-servicios border border-[#118597] text-[#118597] hover:bg-[#e1f3f4] transition text-center mt-4 py-2 px-4 rounded-md w-full md:w-auto min-w-[150px] max-w-[350px]">
+                Ver categoría
+            </a>
+        </div>
+    </div>
+
+    <!-- Servicio 3 (Fondo azul claro) -->
+    <div class="flex flex-col md:flex-row bg-[#e5eaf2] rounded-lg overflow-hidden shadow-md">
+        <img src="https://via.placeholder.com/300x200" alt="Gestiones Legales" class="w-full md:w-2/3 object-cover">
+        <div class="p-6 flex flex-col justify-center md:w-2/3">
+            <h3 class="text-xl font-bold text-gray-900">Gestiones Legales</h3>
+            <p class="text-gray-700 text-md mt-2">
+                Brindamos respaldo jurídico en la creación de contratos, revisión de riesgos legales, estructuración corporativa y protección de tus derechos de propiedad intelectual.
+            </p>
+            <a href="#" class="btn-servicios border border-[#118597] text-[#118597] hover:bg-[#e1f3f4] transition text-center mt-4 py-2 px-4 rounded-md w-full md:w-auto min-w-[150px] max-w-[350px]">
+                Ver categoría
+            </a>
+        </div>
+    </div>
+
+    <!-- Servicio 4 (Fondo blanco) -->
+    <div class="flex flex-col md:flex-row-reverse bg-white rounded-lg overflow-hidden shadow-md">
+        <img src="https://via.placeholder.com/300x200" alt="Servicios Contables" class="w-full md:w-2/3 object-cover">
+        <div class="p-6 flex flex-col justify-center md:w-2/3">
+            <h3 class="text-xl font-bold text-gray-900">Servicios Contables</h3>
+            <p class="text-gray-700 text-md mt-2">
+                Administramos tu información financiera con precisión, gestionando impuestos, cumplimiento tributario, facturación electrónica y reportes contables clave.
+            </p>
+            <a href="#" class="btn-servicios border border-[#118597] text-[#118597] hover:bg-[#e1f3f4] transition text-center mt-4 py-2 px-4 rounded-md w-full md:w-auto min-w-[150px] max-w-[350px]">
+                Ver categoría
+            </a>
+        </div>
+    </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+    <!-- Footer (Mismo que en Home) -->
+    <footer class="bg-[#00798C] text-white py-10 px-6 lg:px-[8%]">
+        <div class="container mx-auto flex flex-col lg:flex-row justify-between items-start lg:items-center space-y-8 lg:space-y-0">
+
+            <!-- Sección Más información -->
+            <div class="w-full lg:w-1/3">
+                <h3 class="text-lg font-bold">Más información</h3>
+                <ul class="mt-4 space-y-2">
+                    <li><a href="#" class="hover:underline">Preguntas frecuentes</a></li>
+                    <li><a href="#" class="hover:underline">Quiénes somos</a></li>
+                    <li><a href="#" class="hover:underline">Contáctanos</a></li>
+                    <li><a href="#" class="hover:underline">Aviso de privacidad</a></li>
+                </ul>
+            </div>
+
+            <!-- Sección Contacto -->
+            <div class="w-full lg:w-1/3">
+                <h3 class="text-lg font-bold">Contacto</h3>
+                <p class="mt-4">33-1816-7026</p>
+                <p>33-2003-1166</p>
+                <p class="mt-2">contacto@sfconsultoria.com.mx</p>
+                <p class="mt-4">Fray Luis de Palacio #377 Col. Ladrón de Guevara Guadalajara, Jalisco. C.P. 44560</p>
+            </div>
+
+            <!-- Redes Sociales y Logo -->
+            <div class="w-full lg:w-1/3 flex flex-col items-center lg:items-end">
+                <img src="ruta-del-logo.png" alt="SF Consultoría Fiscal" class="h-16">
+                <div class="flex space-x-4 mt-4">
+                    <a href="#" class="w-8 h-8 flex items-center justify-center rounded-full border border-white hover:bg-white hover:text-[#00798C] transition">
+                        <i class="ri-youtube-fill text-lg"></i>
+                    </a>
+                    <a href="#" class="w-8 h-8 flex items-center justify-center rounded-full border border-white hover:bg-white hover:text-[#00798C] transition">
+                        <i class="ri-instagram-fill text-lg"></i>
+                    </a>
+                    <a href="#" class="w-8 h-8 flex items-center justify-center rounded-full border border-white hover:bg-white hover:text-[#00798C] transition">
+                        <i class="ri-facebook-fill text-lg"></i>
+                    </a>
+                </div>
+                <p class="mt-4 text-sm">Derechos reservados | SF Consultoría 2024</p>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/scripts.js"></script>
+</body>
+</html>

@@ -52,3 +52,12 @@ h1 {
     }
 }
 
+.btn-servicios {
+    display: inline-block;
+    min-width: 150px;
+    max-width: 350px;
+    text-align: center;
+    padding: 10px 12px;
+    border-radius: 8px;
+    width: 100%; /* Para que mantenga el tamaño */
+}
