@@ -106,23 +106,31 @@ document.addEventListener("DOMContentLoaded", function () {
         fadeObserver.observe(element);
     });
 
-    /** =========================================
-     * ✅ 5. Ocultar Navbar al hacer Scroll Down y Mostrar al hacer Scroll Up
-     * ========================================= */
-    let lastScrollTop = 0;
-    const navbar = document.getElementById("navbar");
+ 
+        /** =========================================
+         * ✅ Ocultar Navbar en Scroll Down y Mostrar en Scroll Up
+         * ========================================= */
+        let lastScrollTop = 0;
+        const navbar = document.getElementById("navbar");
 
-    window.addEventListener("scroll", function () {
-        let currentScroll = window.scrollY;
+        window.addEventListener("scroll", function () {
+            let currentScroll = window.scrollY;
 
-        if (currentScroll > lastScrollTop && currentScroll > 50) {
-            // Ocultar navbar en scroll down
-            navbar.classList.add("-translate-y-full");
-        } else {
-            // Mostrar navbar en scroll up
-            navbar.classList.remove("-translate-y-full");
-        }
+            if (currentScroll > 100) { // Se oculta solo si bajaste 100px o más
+                if (currentScroll > lastScrollTop) {
+                    // Ocultar navbar en scroll down
+                    navbar.classList.add("-translate-y-full");
+                } else {
+                    // Mostrar navbar en scroll up
+                    navbar.classList.remove("-translate-y-full");
+                }
+            } else {
+                // Asegurar que la navbar siempre sea visible cuando estamos en la parte superior
+                navbar.classList.remove("-translate-y-full");
+            }
 
-        lastScrollTop = currentScroll;
-    });
-});
+            lastScrollTop = Math.max(0, currentScroll); // Evita valores negativos
+        });
+
+
+}); // ✅ Se cierra correctamente aquí
