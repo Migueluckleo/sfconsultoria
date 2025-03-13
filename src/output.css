@@ -461,9 +461,6 @@
   .aspect-square {
     aspect-ratio: 1 / 1;
   }
-  .h-\[200px\] {
-    height: 200px;
-  }
   .h-auto {
     height: auto;
   }
@@ -1341,12 +1338,6 @@
   .p-6 {
     padding: calc(var(--spacing) * 6);
   }
-  .p-8 {
-    padding: calc(var(--spacing) * 8);
-  }
-  .p-10 {
-    padding: calc(var(--spacing) * 10);
-  }
   .px-2 {
     padding-inline: calc(var(--spacing) * 2);
   }
@@ -2023,11 +2014,6 @@
       gap: calc(var(--spacing) * 0);
     }
   }
-  .md\:p-6 {
-    @media (width >= 48rem) {
-      padding: calc(var(--spacing) * 6);
-    }
-  }
   .md\:p-8 {
     @media (width >= 48rem) {
       padding: calc(var(--spacing) * 8);
@@ -2102,6 +2088,10 @@
   font-size: 16px;
   font-weight: 500;
   padding: 16px;
+}
+.p {
+  font-size: 16px;
+  text-align: justify;
 }
 @property --tw-translate-x {
   syntax: "*";
