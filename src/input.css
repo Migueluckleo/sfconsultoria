@@ -7,8 +7,10 @@
 
 @theme {
     --color-brand-500: #118597;
-    --color-secondary-light: #DEE3F2;
-}
+    --color-secondary-100: #DEE3F2;
+    --color-brand-100: #E7F3F5;
+    --color-secondary-500: #2142A6;
+  }
 .button-primary{
     border-radius: 8px;
     background-color: #118597;

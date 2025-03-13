@@ -6,10 +6,10 @@
   <link href="src/output.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="text-gray-800">
    <!-- Hero -->
    <section id="heroBackground" class="relative bg-cover bg-center h-screen lg:min-h-[600px] flex items-center pt-24" 
-   style="background-image: url(src/assets/pexels-500photos-com-15338-93398.jpg);">
+   style="background-image: url(src/assets/home/heroHome.jpg);">
 <div class="container mx-auto px-6 lg:px-0">
   <!-- Contenedor de la Caja de Texto (centrado con espaciado lateral en móviles) -->
   <div class="bg-white/60 backdrop-blur-2xl p-6 md:p-10 rounded-xl shadow-lg max-w-lg w-full lg:ml-[8%]">
@@ -21,10 +21,10 @@
       </p>
       <!-- Botones -->
       <div class="mt-6 flex space-x-4">
-          <a href="unidades.html" class="bg-brand-500 text-white px-6 py-2 rounded-lg text-sm md:text-base font-medium shadow-md hover:bg-[#326168] ">
+          <a href="#" class="bg-brand-500 text-white px-6 py-2 rounded-lg text-sm md:text-base font-medium shadow-md hover:bg-[#326168] ">
               Ver Servicios
           </a>
-          <a href="contacto.html" class="border border-sf-blue text-sf-blue px-6 py-2 rounded-lg text-sm md:text-base font-medium hover:bg-[#326168] hover:text-brand-500">
+          <a href="contacto.html" class="border border-brand-500 text-brand-500 px-6 py-2 rounded-lg text-sm md:text-base font-medium hover:bg-[#326168] hover:text-brand-500">
               Contacto
           </a>
       </div>
@@ -33,10 +33,10 @@
 </section>
 
 <!--Sección de Estadísticas--> 
-<section class="flex flex-col md:flex-row bg-secondary-light text-gray-800 py-12">
-<div class="relative flex flex-row w-full max-w-[1536px] left-[50%] transform translate-x-[-50%]">
+<section class="flex flex-col md:flex-row bg-secondary-100 text-gray-800 py-4 justify-center ">
+<div class="relative flex flex-col md:flex-row w-full max-w-[1536px] ">
 
-    <div class="flex flex-col w-1/2  p-16 gap-4">
+    <div class="flex flex-col w-full md:w-1/2 p-6 md:py-12 pr-12 gap-4">
         <h2 class="text-3xl font-semibold text-gray-800">
             En SF Consultoría
         </h2>
@@ -49,9 +49,9 @@
     </div>
     
     
-    <div id="counters" class=" relative flex flex-col w-1/2  p-16 gap-4">
+    <div id="counters" class=" relative flex flex-col w-full md:w-1/2 p-6 gap-4">
         
-        <div class="flex flex-col md:flex-row w-full justify-between">
+        <div class="flex flex-row md:flex-row w-full justify-between">
             <div class="flex flex-col items-start w-1/2">
                 <span class="counter text-2xl md:text-4xl font-bold" data-target="750" data-suffix="mil">0</span>
                 <p class="text-base md:text-lg">Clientes satisfechos</p>
@@ -62,7 +62,7 @@
             </div>
         </div>
 
-        <div class="flex flex-col md:flex-row w-full justify-between">
+        <div class="flex flex-row w-full justify-between">
 
             <div class="flex flex-col items-start w-1/2">
                 <span class="counter text-2xl md:text-4xl font-bold" data-target="200" data-suffix="">0</span>
@@ -76,10 +76,86 @@
 
         <p>Nuestros clientes han logrado reducir hasta un <span class="font-bold">20%</span> en cargas fiscales con nuestras estrategias.</p>
     </div>
-    
 </div>
-   
 </section>
+
+<!--Services-->
+<section class="realtive flex flex-col w-full  gap-10 p-4 md:p-8 items-center justify-center">
+<div class="relative flex flex-col w-full px-2 md:px-6 max-w-[1536px] gap-4 md:gap-0">
+    <h2 class="text-2xl font-semibold">
+        Tu <span class="text-brand-500">Éxito Empresarial Comienza</span>  con los Servicios Correctos
+    </h2>
+    <p>
+        Ponemos a tu alcance un portafolio de soluciones diseñadas para atender las necesidades específicas de tu empresa, asegurando cumplimiento y optimización en cada paso.
+    </p>
+</div>
+<div  id="cards-container" class="flex flex-col md:flex-row gap-6 md:px-6 max-w-[1536px] h-auto">
+    <div id="card-one" class="flex flex-col w-full p-2 flex-1">
+        <img class="rounded-t-2xl" src="src/assets/home/2.Servicios generales/estrategias fiscales.jpg" alt="imagen de estrategias fiscales SF Consultoría">
+        <div class="flex flex-col bg-brand-100 text-gray-800 gap-4 p-4 rounded-b-2xl h-full">
+            <h3 class="text-[20px] font-semibold">
+                Estrategias Fiscales
+            </h3>
+            <p>
+                Diseñamos estrategias fiscales y calculamos impuestos para optimizar tus recursos y garantizar el cumplimiento legal.
+            </p>
+            <div class="flex-grow"></div>
+            <button class="w-full border border-brand-500 text-brand-500 px-6 py-2 rounded-lg text-sm md:text-base font-medium hover:bg-[#326168] hover:text-brand-500">
+                Ver categoria
+            </button>
+        </div>
+    </div>
+    
+    <div id="card-two" class="flex flex-col w-full p-2 flex-1">
+        <img class="rounded-t-2xl" src="src/assets/home/2.Servicios generales/estrategias fiscales.jpg" alt="imagen de estrategias fiscales SF Consultoría">
+        <div class="flex flex-col bg-secondary-100 text-gray-800 gap-4 p-4 rounded-b-2xl h-full">
+            <h3 class="text-[20px] font-semibold">
+                Administraciones Nominales / Seguridad Social
+            </h3>
+            <p>
+                Manejamos nómina, cuotas obrero-patronales, trámites en el IMSS, cumplimiento REPSE y administración de personal.
+            </p>
+            <div class="flex-grow"></div>
+            <button class="w-full border border-secondary-500 text-secondary-500 px-6 py-2 rounded-lg text-sm md:text-base font-medium hover:bg-[#326168] hover:text-brand-500">
+                Ver categoria
+            </button>
+        </div>
+    </div>
+
+    <div id="card-three" class="flex flex-col w-full p-2 flex-1">
+        <img class="rounded-t-2xl" src="src/assets/home/2.Servicios generales/estrategias fiscales.jpg" alt="imagen de estrategias fiscales SF Consultoría">
+        <div class="flex flex-col bg-brand-100 text-gray-800 gap-4 p-4 rounded-b-2xl h-full">
+            <h3 class="text-[20px] font-semibold">
+                Gestiones Legales
+            </h3>
+            <p>
+                Realizamos auditorías legales, elaboramos contratos, protocolizamos asambleas y gestionamos propiedad intelectual.
+            </p>
+            <div class="flex-grow"></div>
+            <button class="w-full border border-brand-500 text-brand-500 px-6 py-2 rounded-lg text-sm md:text-base font-medium hover:bg-[#326168] hover:text-brand-500">
+                Ver categoria
+            </button>
+        </div>
+    </div>
+
+    <div id="card-four" class="flex flex-col w-full p-2 flex-1">
+        <img class="rounded-t-2xl" src="src/assets/home/2.Servicios generales/estrategias fiscales.jpg" alt="imagen de estrategias fiscales SF Consultoría">
+        <div class="flex flex-col bg-secondary-100 text-gray-800 gap-4 p-4 rounded-b-2xl h-full">
+            <h3 class="text-[20px] font-semibold">
+                Servicios Contables
+            </h3>
+            <p>
+                Gestionamos tu contabilidad en impuestos, buzón tributario, declaración anual, datos fiscales y emisión de facturas.
+            </p>
+            <div class="flex-grow"></div>
+            <button class="w-full border border-secondary-500 text-secondary-500 px-6 py-2 rounded-lg text-sm md:text-base font-medium hover:bg-[#326168] hover:text-brand-500">
+                Ver categoria
+            </button>
+        </div>
+    </div>
+</div>
+</section>
+
 
 </body>
 </html>
