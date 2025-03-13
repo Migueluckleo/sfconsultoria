@@ -11,6 +11,30 @@
     --color-brand-100: #E7F3F5;
     --color-secondary-500: #2142A6;
   }
+  @keyframes scrollLogos {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+  
+  .logos-carousel {
+    display: flex;
+    white-space: nowrap;
+    animation: scrollLogos 10s linear infinite;
+  }
+  
+  .logos-carousel-wrapper {
+    overflow: hidden;
+  }
+  
+  .logos-carousel img {
+    flex-shrink: 0; /* Evita que las imágenes se reduzcan */
+  }
+  
+
 .button-primary{
     border-radius: 8px;
     background-color: #118597;
