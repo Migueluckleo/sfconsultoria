@@ -1,0 +1,22 @@
+@import "tailwindcss";
+@layer base {
+    html {
+      font-family: 'Lato', sans-serif;
+    }
+  }
+
+@theme {
+    --color-brand-500: #118597;
+    --color-secondary-light: #DEE3F2;
+}
+.button-primary{
+    border-radius: 8px;
+    background-color: #118597;
+    min-height: 40px;
+    justify-content:center;
+    align-items: center;
+    color:white;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 16px;
+}

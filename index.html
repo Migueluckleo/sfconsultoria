@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="src/output.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+   <!-- Hero -->
+   <section id="heroBackground" class="relative bg-cover bg-center h-screen lg:min-h-[600px] flex items-center pt-24" 
+   style="background-image: url(src/assets/pexels-500photos-com-15338-93398.jpg);">
+<div class="container mx-auto px-6 lg:px-0">
+  <!-- Contenedor de la Caja de Texto (centrado con espaciado lateral en móviles) -->
+  <div class="bg-white/60 backdrop-blur-2xl p-6 md:p-10 rounded-xl shadow-lg max-w-lg w-full lg:ml-[8%]">
+      <h1 id="heroTitulo" class="text-gray-800 text-[32px] md:text-[32px] font-semibold leading-tight">
+        Lideramos tu <span id="heroResaltado" class="font-bold text-brand-500">Cumplimiento Fiscal </span> con Estrategias Personalizadas
+      </h1>
+      <p id="heroDescripcion" class="text-gray-600 mt-4 text-sm md:text-base">
+        Nuestro equipo de expertos contables, legales y fiscales diseña soluciones hechas a la medida para que tu empresa cumpla con la normativa mientras maximizas beneficios.
+      </p>
+      <!-- Botones -->
+      <div class="mt-6 flex space-x-4">
+          <a href="unidades.html" class="bg-brand-500 text-white px-6 py-2 rounded-lg text-sm md:text-base font-medium shadow-md hover:bg-[#326168] ">
+              Ver Servicios
+          </a>
+          <a href="contacto.html" class="border border-sf-blue text-sf-blue px-6 py-2 rounded-lg text-sm md:text-base font-medium hover:bg-[#326168] hover:text-brand-500">
+              Contacto
+          </a>
+      </div>
+  </div>
+</div>
+</section>
+
+<!--Sección de Estadísticas--> 
+<section class="flex flex-col md:flex-row bg-secondary-light text-gray-800 py-12">
+<div class="relative flex flex-row w-full max-w-[1536px] left-[50%] transform translate-x-[-50%]">
+
+    <div class="flex flex-col w-1/2  p-16 gap-4">
+        <h2 class="text-3xl font-semibold text-gray-800">
+            En SF Consultoría
+        </h2>
+        <p class="text-[16px] font-medium text-gray-800">
+            Respaldamos nuestra experiencia con resultados medibles mostrando nuestro compromiso con la excelencia y la confianza de nuestros clientes.
+        </p>
+        <button class="button-primary w-full mt-4">
+            Quiénes somos
+        </button>
+    </div>
+    
+    
+    <div id="counters" class=" relative flex flex-col w-1/2  p-16 gap-4">
+        
+        <div class="flex flex-col md:flex-row w-full justify-between">
+            <div class="flex flex-col items-start w-1/2">
+                <span class="counter text-2xl md:text-4xl font-bold" data-target="750" data-suffix="mil">0</span>
+                <p class="text-base md:text-lg">Clientes satisfechos</p>
+            </div>
+            <div class="flex flex-col items-start w-1/2">
+                <span class="counter text-2xl md:text-4xl font-bold" data-target="90" data-suffix="">0</span>
+                <p class="text-base md:text-lg">Casos de éxito</p>
+            </div>
+        </div>
+
+        <div class="flex flex-col md:flex-row w-full justify-between">
+
+            <div class="flex flex-col items-start w-1/2">
+                <span class="counter text-2xl md:text-4xl font-bold" data-target="200" data-suffix="">0</span>
+                <p class="text-base md:text-lg">Retención de clientes</p>
+            </div>
+            <div class="flex flex-col items-start w-1/2">
+                <span class="counter text-2xl md:text-4xl font-bold" data-target="1200" data-suffix="">0</span>
+                <p class="text-base md:text-lg">Casos de Casos de éxito</p>
+            </div>
+        </div>
+
+        <p>Nuestros clientes han logrado reducir hasta un <span class="font-bold">20%</span> en cargas fiscales con nuestras estrategias.</p>
+    </div>
+    
+</div>
+   
+</section>
+
+</body>
+</html>
