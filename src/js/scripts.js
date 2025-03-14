@@ -33,3 +33,26 @@ if (carousel) {
     carousel.addEventListener("mouseenter", () => carousel.style.animationPlayState = "paused");
     carousel.addEventListener("mouseleave", () => carousel.style.animationPlayState = "running");
 }
+
+/** ================================
+ * ✅ testimoniales
+ * ================================ */
+document.addEventListener("DOMContentLoaded", function () {
+    setTimeout(() => {
+        new Swiper(".mySwiper", {
+            loop: true, // Hace que el carrusel sea infinito
+            autoplay: {
+                delay: 3000, // Cambia de slide cada 3 segundos
+                disableOnInteraction: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+    }, 100);
+});

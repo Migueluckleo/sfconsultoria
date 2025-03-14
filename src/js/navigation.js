@@ -128,3 +128,22 @@ function highlightActiveLink() {
 document.addEventListener("DOMContentLoaded", () => {
     loadNavbar();
 });
+
+
+async function loadFooter() {
+    try {
+        const footerContainer = document.createElement("div");
+        footerContainer.id = "footer-container";
+        document.body.appendChild(footerContainer);
+
+        const response = await fetch("components/footer.html");
+        const html = await response.text();
+        
+        footerContainer.innerHTML = html;
+    } catch (error) {
+        console.error("❌ Error cargando el footer:", error);
+    }
+}
+
+// Ejecutar carga del footer
+document.addEventListener("DOMContentLoaded", loadFooter);
