@@ -2031,9 +2031,7 @@
     --tw-outline-style: solid;
     outline-style: solid;
   }
-  .\[default\:\\u202F\$\{N\(\`\$\{u\}\`\)\}\] {
-    default: \u202F${N(`${u}`)};
-  }
+
   .backface-hidden {
     backface-visibility: hidden;
   }
