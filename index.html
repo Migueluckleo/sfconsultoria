@@ -6,10 +6,9 @@
   <link href="src/output.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
-
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 </head>
+
 <body class="text-gray-800">
    <!-- Hero -->
    <section id="heroBackground" class="relative bg-cover bg-center h-screen lg:min-h-[600px] flex items-center pt-24" 
@@ -161,12 +160,12 @@
 </section>
 
 <!--Aliados-->
-<section class="relative flex flex-col w-full gap-10 px-6  items-center justify-between mt-8"> 
-    <div id="information w-full max-w-[1536px]">
-        <h2  class="text-2xl md:text-3xl font-semibold">
+<section class="relative flex flex-col w-full items-center mt-8 px-6 md:px-6"> 
+    <div id="information" class="relative flex flex-col w-full md:px-6 max-w-[1536px]">
+        <h2 class="text-2xl md:text-3xl font-semibold md:px-2">
             Nuestros <span class="font-semibold text-brand-500">Aliados Estratégicos.</span>
         </h2 >
-        <p>
+        <p class="md:px-2">
             Grandes empresas y líderes en su industria han confiado en SF Consultoría Fiscal. Cada alianza es un reflejo de nuestro compromiso por ofrecer resultados excepcionales. ¿Te gustaría ser nuestro próximo caso de éxito?
         </p>
     </div>
@@ -201,27 +200,27 @@
     </div>
 </section>
 
-<!--Aliados-->
-<section class="flex flex-col w-full gap-10 px-6 mt-8 items-center justify-center">
+<!--Testimonios-->
+<section class="flex flex-col w-full gap-10 mt-16 px-6 md:px-6 md:items-center md:justify-center">
     <!-- Contenedor del Título -->
-    <div class="relative flex flex-col w-full max-w-[1536px] px-6 text-center md:text-left">
-        <h2 class="text-2xl md:text-3xl font-semibold w-full">
+    <div class="relative flex flex-col w-full max-w-[1536px] md:px-6 md:text-left">
+        <h2 class="text-2xl md:text-3xl font-semibold w-full md:px-2">
             Voces que <span class="font-semibold text-brand-500">Avalan Nuestro Trabajo</span>
         </h2>
-        <p class="text-gray-600 max-w-2xl mx-auto md:mx-0">
+        <p class="text-gray-600 text-start md:mx-0 w-full md:px-2">
             Las historias de éxito de nuestros clientes reflejan nuestro compromiso en optimizar su cumplimiento contable y alcanzar sus objetivos empresariales.
         </p>
     </div>
 
     <!-- Contenedor de Swiper y Video -->
-    <div class="flex flex-col md:flex-row w-full max-w-[1536px] gap-8 items-center">
+    <div class="flex flex-col md:flex-row w-full max-w-[1536px] gap-8 items-center md:px-6">
         <!-- Swiper Testimonios -->
-        <div class="swiper mySwiper w-full md:w-1/2 h-[350px] md:h-[400px]">
+        <div class="swiper mySwiper w-full md:w-1/2 h-[350px] md:h-[400px] md:px-6">
             <div class="swiper-wrapper">
                 <!-- Slide 1 -->
                 <div class="swiper-slide">
                     <div class="p-6 text-center">
-                        <img src="src/assets/Logos/Imagen 1.jpg" class="w-32 h-32 md:w-40 md:h-40 mx-auto rounded-full" alt="Logo 1">
+                        <img src="src/assets/testimoniales/dram.png" class="w-32 h-32 md:w-40 md:h-40 mx-auto rounded-full" alt="Logo 1">
                         <h3 class="font-semibold text-lg mt-4">Empresa 1</h3>
                         <p class="italic text-gray-600">"Este servicio ha sido increíble, 100% recomendado."</p>
                     </div>
@@ -229,7 +228,7 @@
                 <!-- Slide 2 -->
                 <div class="swiper-slide">
                     <div class="p-6 text-center">
-                        <img src="src/assets/Logos/Imagen 2.png" class="w-32 h-32 md:w-40 md:h-40 mx-auto rounded-full" alt="Logo 2">
+                        <img src="src/assets/testimoniales/hdc.png" class="w-32 h-32 md:w-40 md:h-40 mx-auto rounded-full" alt="Logo 2">
                         <h3 class="font-semibold text-lg mt-4">Empresa 2</h3>
                         <p class="italic text-gray-600">"Nos ayudaron a crecer nuestro negocio exponencialmente."</p>
                     </div>
@@ -237,7 +236,7 @@
                 <!-- Slide 3 -->
                 <div class="swiper-slide">
                     <div class="p-6 text-center">
-                        <img src="src/assets/Logos/Imagen 3.png" class="w-32 h-32 md:w-40 md:h-40 mx-auto rounded-full" alt="Logo 3">
+                        <img src="src/assets/testimoniales/ibarra.jpg" class="w-32 h-32 md:w-40 md:h-40 mx-auto rounded-full" alt="Logo 3">
                         <h3 class="font-semibold text-lg mt-4">Empresa 3</h3>
                         <p class="italic text-gray-600">"Excelente servicio, superaron nuestras expectativas."</p>
                     </div>
@@ -245,7 +244,7 @@
                 <!-- Slide 4 -->
                 <div class="swiper-slide">
                     <div class="p-6 text-center">
-                        <img src="src/assets/Logos/Imagen 4.png" class="w-32 h-32 md:w-40 md:h-40 mx-auto rounded-full" alt="Logo 4">
+                        <img src="src/assets/testimoniales/kaizen.jpg" class="w-32 h-32 md:w-40 md:h-40 mx-auto rounded-full" alt="Logo 4">
                         <h3 class="font-semibold text-lg mt-4">Empresa 4</h3>
                         <p class="italic text-gray-600">"Muy profesionales, sin duda los recomendaría."</p>
                     </div>
@@ -253,34 +252,40 @@
                 <!-- Slide 5 -->
                 <div class="swiper-slide">
                     <div class="p-6 text-center">
-                        <img src="src/assets/Logos/Imagen 5.jpg" class="w-32 h-32 md:w-40 md:h-40 mx-auto rounded-full" alt="Logo 5">
+                        <img src="src/assets/testimoniales/mic.png" class="w-32 h-32 md:w-40 md:h-40 mx-auto rounded-full" alt="Logo 5">
                         <h3 class="font-semibold text-lg mt-4">Empresa 5</h3>
                         <p class="italic text-gray-600">"La mejor experiencia que hemos tenido con un servicio."</p>
                     </div>
                 </div>
-                <!-- Slide 6 -->
-                <div class="swiper-slide">
-                    <div class="p-6 text-center">
-                        <img src="src/assets/Logos/Imagen 8.png" class="w-32 h-32 md:w-40 md:h-40 mx-auto rounded-full" alt="Logo 6">
-                        <h3 class="font-semibold text-lg mt-4">Empresa 6</h3>
-                        <p class="italic text-gray-600">"Un equipo comprometido y con gran atención al detalle."</p>
-                    </div>
-                </div>
-           
             </div>
             <!-- Flechas de navegación -->
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next hidden md:flex"></div>
+            <div class="swiper-button-prev hidden md:flex"></div>
             <!-- Paginación -->
             <div class="swiper-pagination"></div>
         </div>
 
         <!-- Video -->
-        <div id="video" class="w-full md:w-1/2 flex justify-center">
+        <div id="video" class="w-full md:w-1/2 flex justify-center md:px-6">
             <video class="w-full h-auto md:h-[400px] rounded-lg shadow-lg" src="src/assets/home/video.mp4" controls></video>
         </div>
     </div>
 </section>
+<!-- Contenedor del mensaje con clases para animación -->
+<div id="message" class="opacity-0 translate-y-8 transition-all duration-700 ease-out bg-secondary-100 p-6 md:p-10 rounded-lg max-w-[1536px] mx-auto flex items-start gap-6">
+    <!-- Línea decorativa -->
+    <div class="w-1 bg-teal-500"></div>
+
+    <!-- Contenido del mensaje -->
+    <div>
+        <p class="text-xl md:text-2xl font-medium text-gray-800">
+            “<span class="font-semibold">Nuestro compromiso, calidad, liderazgo y trabajo en equipo</span> guían nuestras acciones, fidelizan la relación con nuestros clientes y crean valor para sus negocios”
+        </p>
+        <p class="text-gray-500 text-sm mt-4 uppercase tracking-wide">
+            RICARDO JÁUREGUI | DIRECTOR GENERAL. SF CONSULTORÍA FISCAL.
+        </p>
+    </div>
+</div>
 
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>

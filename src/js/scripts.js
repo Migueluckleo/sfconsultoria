@@ -56,3 +56,17 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }, 100);
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const message = document.getElementById("message");
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                message.classList.add("opacity-100", "translate-y-0");
+            }
+        });
+    }, { threshold: 0.2 }); // Se activa cuando el 20% del elemento es visible
+
+    observer.observe(message);
+});
