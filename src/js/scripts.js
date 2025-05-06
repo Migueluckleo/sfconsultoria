@@ -70,3 +70,30 @@ document.addEventListener("DOMContentLoaded", function () {
 
     observer.observe(message);
 });
+
+// contacto.js
+
+// Inicializa EmailJS con tu Public Key
+(function() {
+    emailjs.init("YOUR_PUBLIC_KEY");
+  })();
+  
+  // Referencias al formulario y mensaje de estado
+  const form = document.getElementById('form-contacto');
+  const status = document.getElementById('form-status');
+  
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+  
+    emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
+      .then(() => {
+        // Muestra mensaje de éxito
+        status.classList.remove('hidden');
+        status.textContent = 'Mensaje enviado correctamente.';
+        form.reset();
+      }, (err) => {
+        alert('Error al enviar. Intenta más tarde.');
+        console.error('EmailJS Error:', err);
+      });
+  });
+  

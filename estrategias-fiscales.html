@@ -59,7 +59,7 @@
 </section>
 
 <!--contacto-->
-<section class="flex flex-col items-center justify-center gap-6 px-6 lg:px-30 2xl:px-80 lg:gap-16 p-6">
+<section class="flex flex-col items-center justify-center gap-6 px-6 lg:px-30 2xl:px-80 lg:gap-32 p-6">
 <div class="flex flex-col md:flex-row ">
 
   <div class="flex flex-col w-full md:w-1/2 gap-4">
@@ -104,77 +104,25 @@
   Si tienes alguna pregunta o necesitas más información, no dudes en ponerte en contacto con nosotros. Nuestro equipo está listo para brindarte la asistencia que necesitas
 </p>
   </div>
-<!-- Formulario de contacto funcional con FormSubmit.co -->
 
-<form 
-  action="https://formsubmit.co/migueluxleo@gmail.com" 
-  method="POST"
-  class="flex flex-col w-full md:w-1/2 gap-4 p-0 md:p-6 mt-10 md:mt-0"
->
-  <input type="hidden" name="_captcha" value="false">
-  <input type="hidden" name="_next" value="index.html">
-  
-  <!-- Campo Nombre -->
-  <label class="block">
-    <span class="text-gray-700">Nombre</span>
-    <input 
-      type="text" 
-      name="nombre" 
-      required
-      class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2
-             focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition"
+
+<!-- HTML + Tailwind -->
+<section class="bg-[#e4e9f5] py-12 flex flex-col items-center justify-center text-center px-4 ml-16">
+  <h2 class="text-3xl md:text-4xl font-semibold text-gray-800 mb-2">Suscríbete a nuestro newsletter</h2>
+  <p class="text-lg text-gray-700 mb-6">Conéctate con las Últimas Noticias y Consejos</p>
+
+  <div class="w-full max-w-md space-y-4">
+    
+    <a
+      href="http://eepurl.com/iQXyuU"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="block w-full text-center bg-[#dbf2f2] text-[#127c94] font-semibold py-3 rounded-md border border-[#127c94] hover:bg-[#c6e9e9] transition-colors"
     >
-  </label>
-
-  <!-- Campo Correo -->
-  <label class="block">
-    <span class="text-gray-700">Correo</span>
-    <input 
-      type="email" 
-      name="correo" 
-      required
-      class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2
-             focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition"
-    >
-  </label>
-
-  <!-- Campo Teléfono -->
-  <label class="block">
-    <span class="text-gray-700">Teléfono</span>
-    <input 
-      type="tel" 
-      name="telefono"
-      class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2
-             focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition"
-    >
-  </label>
-
-  <!-- Campo Mensaje -->
-  <label class="block">
-    <span class="text-gray-700">Mensaje</span>
-    <textarea 
-      name="mensaje" 
-      rows="4" 
-      required
-      class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2
-             focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition"
-    ></textarea>
-  </label>
-
-  <!-- Botón -->
-  <button 
-    type="submit" 
-    class="bg-brand-500 text-white font-semibold px-6 py-2 rounded-md hover:bg-brand-500/80 transition-all"
-  >
-    Enviar mensaje
-  </button>
-
-  <!-- Aviso de privacidad -->
-  <p class="text-sm text-gray-600">
-    Al presionar el botón enviar mensaje confirmas haber leído nuestro 
-    <a href="aviso-de-privacidad.html" class="text-brand-500 hover:underline">Aviso de privacidad</a>
-  </p>
-</form>
+      Registrarse
+    </a>
+  </div>
+</section>
 
 
 </section>
