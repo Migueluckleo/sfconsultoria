@@ -1,0 +1,157 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="src/output.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+</head>
+
+<body class="text-gray-800">
+   <!-- Hero -->
+   <section id="heroBackground" class="relative bg-cover bg-center h-screen lg:min-h-[600px] flex items-center pt-24" 
+   style="background-image: url(src/assets/gestiones/hero.jpg);">
+<div class="container mx-auto px-6 lg:px-0">
+  <!-- Contenedor de la Caja de Texto (centrado con espaciado lateral en móviles) -->
+  <div class="bg-white/60 backdrop-blur-2xl p-6 md:p-10 rounded-xl shadow-lg max-w-lg w-full lg:ml-[8%]">
+      <h1 id="heroTitulo" class="text-gray-800 text-[32px] md:text-[32px] font-semibold leading-tight">
+        Gestiones <span id="heroResaltado" class="font-bold text-brand-500">legales</span> 
+      </h1>
+      <p id="heroDescripcion" class="text-gray-600 text-justify mt-4">
+        Ofrecemos soluciones legales especializadas en áreas fiscales y corporativas, garantizando un servicio que cumpla con la normativa vigente y cuente con el respaldo necesario en litigios y reestructuraciones corporativas.
+      </p>
+  </div>
+</div>
+</section>
+<!--descripcion-->
+<section class="flex flex-col md:flex-row items-center justify-center gap-6 px-6 lg:px-30 2xl:px-80 lg:gap-16 bg-secondary-100 p-6">
+  <img src="src/assets/gestiones/section.jpg" alt="female-web-designer-with-papers-notes-office-1920w" class="w-full md:w-1/2 object-contain rounded-lg shadow-lg">  
+  <div class="flex flex-col w-full md:w-1/2 gap-4">
+    
+    <h2 class="text-gray-800 text-2xl lg:text-[28px] font-semibold leading-tight"> 
+      Asesoría Legal Integral <span class="text-brand-500">para tu Empresa</span> 
+    </h2>
+    <ul>
+      <li class="flex flex-row items-start gap-2">
+        <i class="ri-checkbox-circle-fill text-lg text-brand-500"></i>
+        <p>Redacción de documentos legales (contratos, actas de asamblea, convenios)</p>
+      </li>
+      <li class="flex flex-row items-center gap-2">
+        <i class="ri-checkbox-circle-fill text-lg text-brand-500"></i>
+        <p>Cumplimiento normativo (PLD, FINTECH)</p>
+      </li>
+      <li class="flex flex-row items-center gap-2">
+        <i class="ri-checkbox-circle-fill text-lg text-brand-500"></i>
+        <p>Reestructuraciones corporativas (Holding)</p>
+      </li>
+      <li class="flex flex-row items-center gap-2">
+        <i class="ri-checkbox-circle-fill text-lg text-brand-500"></i>
+        <p>Protección de Propiedad Intelectual</p>
+      </li>
+      <li class="flex flex-row items-center gap-2">
+        <i class="ri-checkbox-circle-fill text-lg text-brand-500"></i>
+        <p>Valuación de intangibles</p>
+      </li>
+      <li class="flex flex-row items-center gap-2">
+        <i class="ri-checkbox-circle-fill text-lg text-brand-500"></i>
+        <p>Asesoría Legal</p>
+      </li>
+      <li class="flex flex-row items-center gap-2">
+        <i class="ri-checkbox-circle-fill text-lg text-brand-500"></i>
+        <p>Litigio Civil y Mercantil</p>
+      </li>
+      <li class="flex flex-row items-center gap-2">
+        <i class="ri-checkbox-circle-fill text-lg text-brand-500"></i>
+        <p>Pacto parasocial entre accionistas</p>
+      </li>
+      <li class="flex flex-row items-center gap-2">
+        <i class="ri-checkbox-circle-fill text-lg text-brand-500"></i>
+        <p>Acuerdos de inversión (Startup)</p>
+      </li>
+      <li class="flex flex-row items-center gap-2">
+        <i class="ri-checkbox-circle-fill text-lg text-brand-500"></i>
+        <p>Reestructuración de compensaciones laborales</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!--contacto-->
+<section class="flex flex-col items-center justify-center gap-6 px-6 lg:px-30 2xl:px-80 lg:gap-32 p-6">
+<div class="flex flex-col md:flex-row ">
+
+  <div class="flex flex-col w-full md:w-1/2 gap-4">
+  <div class="flex flex-col md:flex-row items-start gap-6">
+        <div class="flex flex-col w-full gap-2">
+          <h3 class="text-gray-800 text-lg lg:text-[20px] font-semibold leading-tight"> 
+            Nuestra oficina
+          </h3>
+          <p class="text-gray-600">
+            Fray Luis de Palacio # 377 Col. Ladrón de Guevara Guadalajara, Jalisco. C.P. 44560
+          </p>
+        </div>
+        <div class="flex flex-col w-full md:w-1/2 gap-2">
+          <h3 class="text-gray-800 text-lg lg:text-[20px] font-semibold leading-tight"> 
+            Contáctanos
+          </h3>
+          <p class="text-gray-600">
+        33-1816-7026 <br>
+        33-2003-1166 <br>
+        contacto@sfconsultoria.com.mx
+          </p>
+        </div>
+  </div>
+<!-- Mapa Google Maps | SF Consultoría -->
+<section class="w-full max-w-6xl mx-auto px-4 py-8" id="mapa-sf">
+
+  <div class="rounded-2xl overflow-hidden shadow-lg border border-gray-200">
+    <iframe
+      title="Mapa de SF Consultoría"
+      aria-label="Ubicación de SF Consultoría en Guadalajara"
+      src="https://www.google.com/maps?q=Fray+Luis+de+Palacio+377,+Ladrón+de+Guevara,+Guadalajara,+Jalisco,+44560&output=embed"
+      width="100%"
+      height="200"
+      loading="lazy"
+      class="w-full h-[250px] border-0"
+      allowfullscreen
+      referrerpolicy="no-referrer-when-downgrade"
+    ></iframe>
+  </div>
+</section>
+<p>
+  Si tienes alguna pregunta o necesitas más información, no dudes en ponerte en contacto con nosotros. Nuestro equipo está listo para brindarte la asistencia que necesitas
+</p>
+  </div>
+
+
+<!-- HTML + Tailwind -->
+<section class="bg-[#e4e9f5] py-12 flex flex-col items-center justify-center text-center px-4 md:ml-16 mt-6 md:mt-0 rounded-2xl">
+  <h2 class="text-2xl md:text-4xl font-semibold text-gray-800 mb-2">Suscríbete a nuestro newsletter</h2>
+  <p class="text-[16px] text-gray-700 mb-6">Conéctate con las Últimas Noticias y Consejos</p>
+
+  <div class="w-full max-w-md space-y-4">
+    
+    <a
+      href="http://eepurl.com/iQXyuU"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="block w-full text-center bg-[#dbf2f2] text-[#127c94] font-semibold py-3 rounded-md border border-[#127c94] hover:bg-[#c6e9e9] transition-colors"
+    >
+      Registrarse
+    </a>
+  </div>
+</section>
+
+
+</section>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script src="src/js/scripts.js"></script>
+<script src="src/js/navigation.js"></script>
+</body>
+</html>
