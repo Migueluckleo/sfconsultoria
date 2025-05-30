@@ -1,46 +1,53 @@
 <!doctype html>
-<html>
+<html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="src/output.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO Meta -->
+  <title>Post | SF Consultoría</title>
+  <meta name="description" content="Detalles del artículo publicado por SF Consultoría.">
+  <meta name="author" content="SF Consultoría">
+
+  <!-- Styles -->
+  <link href="src/output.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet" />
 </head>
 
 <body class="text-gray-800">
-       <!-- Loader global -->
-<div id="loader" class="fixed inset-0 flex items-center justify-center bg-white z-50">
+  <!-- Loader global -->
+  <div id="loader" class="fixed inset-0 flex items-center justify-center bg-white z-50">
     <div class="w-16 h-16 border-4 border-blue-500 border-dashed rounded-full animate-spin"></div>
   </div>
-  
 
-    <div id="post-hero" class="relative flex flex-col w-full max-w-[1440px] h-dvh bg-cover bg-center items-center justify-center text-gray-800 left-1/2 transform -translate-x-1/2 p-6">
-        <div class="flex flex-col items-center justify-center h-auto w-full md:w-1/2 bg-white/50  backdrop-blur-2xl rounded-2xl p-6 gap-4">
-            <h1 id="post-title" class="text-center text-3xl lg:text-6xl font-bold">Post Title</h1>
-            <div class="flex flex-row gap-4 items-center">
-                <p id="post-author" class="text-lg text-gray-600">Autor</p>
-                <p id="post-date" class="text-lg text-gray-600">Fecha</p>
-            </div>
-        </div>
+  <!-- Hero del post -->
+  <section id="post-hero" class="relative flex flex-col w-full max-w-[1440px] h-dvh bg-cover bg-center items-center justify-center text-gray-800 left-1/2 transform -translate-x-1/2 p-6">
+    <div class="flex flex-col items-center justify-center h-auto w-full md:w-1/2 bg-white/50 backdrop-blur-2xl rounded-2xl p-6 gap-4">
+      <h1 id="post-title" class="text-center text-2xl lg:text-3xl font-bold">Post Title</h1>
+      <div class="flex flex-row gap-4 items-center">
+        <p id="post-author" class="text-lg text-gray-600">Autor</p>
+        <p id="post-date" class="text-lg text-gray-600">Fecha</p>
+      </div>
     </div>
+  </section>
 
-    <div class="relative flex flex-col w-full max-w-[1440px] h-auto p-6 gap-8 left-1/2 transform -translate-x-1/2">
-        <h2 id="subtitle-one" class="text-3xl font-semibold">Lorem ipsum dolor sit</h2>
-        <p id="post-paragraph-one" class="text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam</p>
-        <img id="inter-banner" src="" alt="" class="w-full h-[250px] object-cover">
-        <h2 id="subtitle-two" class="text-3xl font-semibold">Lorem ipsum dolor sit</h2>
-        <p id="post-paragraph-two" class="text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam</p>
-    </div>
+  <!-- Contenido del post -->
+  <main class="relative flex flex-col w-full max-w-[1440px] h-auto p-6 gap-8 left-1/2 transform -translate-x-1/2">
+    <h2 id="subtitle-one" class="text-3xl font-semibold">Subtítulo</h2>
+    <p id="post-paragraph-one" class="text-lg leading-relaxed text-justify">Contenido del primer párrafo...</p>
 
-      
+    <img id="inter-banner" src="" alt="Banner intermedio" class="w-full h-[250px] object-cover transition-opacity duration-500" />
 
-<div class="footer-container"></div>
+    <h2 id="subtitle-two" class="text-3xl font-semibold">Subtítulo</h2>
+    <p id="post-paragraph-two" class="text-lg leading-relaxed text-justify">Contenido del segundo párrafo...</p>
+  </main>
 
+  <!-- Footer dinámico si aplica -->
+  <div class="footer-container"></div>
 
-    <script src="js/scripts.js"></script>
-    <script src="js/navigation.js"></script>
-    <!--<script src="js/scripts.js"></script>-->
-  </body>
+  <!-- Scripts -->
+  <script src="src/js/scripts.js"></script>
+  <script src="src/js/navigation.js"></script>
+</body>
 </html>
