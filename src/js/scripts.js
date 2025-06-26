@@ -1,5 +1,5 @@
 /** ================================
- * ✅ Seguimiento de WhatsApp
+ * ✅ Seguimiento de WhatsApp (Desktop)
  * ================================ */
 document.addEventListener("DOMContentLoaded", function () {
   const whatsappBtn = document.getElementById("whatsapp-btn");
@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const url = whatsappBtn.href;
 
       gtag('event', 'conversion', {
-        'send_to': 'AW-17233902589/HmmZCP_u5OMaEP334ZlA',
+        'send_to': 'AW-17233902589/3UeyCJoK_eMaEP334ZIA',
         'event_callback': function () {
           window.location = url;
         }
@@ -232,9 +232,10 @@ if (postHero) {
     }
   })();
 }
-// ===============================
-// ✅ Cargar botón flotante en móvil desde wa-button.html
-// ===============================
+
+/** ================================
+ * ✅ Botón de WhatsApp Móvil cargado desde wa-button.html
+ * ================================ */
 document.addEventListener("DOMContentLoaded", function () {
   if (window.innerWidth <= 768) { // Solo para móvil
     fetch('wa-button.html')
@@ -252,7 +253,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const url = btn.href;
 
             gtag('event', 'conversion', {
-              'send_to': 'AW-17233902589/HmmZCP_u5OMaEP334ZlA',
+              'send_to': 'AW-17233902589/3UeyCJoK_eMaEP334ZIA',
               'event_callback': function () {
                 window.location = url;
               }
