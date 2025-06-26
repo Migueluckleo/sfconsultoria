@@ -1,4 +1,31 @@
 /** ================================
+ * ✅ Seguimiento de WhatsApp
+ * ================================ */
+document.addEventListener("DOMContentLoaded", function () {
+  const whatsappBtn = document.getElementById("whatsapp-btn");
+  if (whatsappBtn) {
+    whatsappBtn.addEventListener("click", function (e) {
+      e.preventDefault(); // Previene navegación inmediata
+      const url = whatsappBtn.href;
+
+      gtag('event', 'conversion', {
+        'send_to': 'AW-17233902589/HmmZCP_u5OMaEP334ZlA',
+        'event_callback': function () {
+          window.location = url;
+        }
+      });
+
+      // Fallback por si el callback no responde
+      setTimeout(function () {
+        window.location = url;
+      }, 1000);
+
+      return false;
+    });
+  }
+});
+
+/** ================================
  * ✅ Animación de Contadores
  * ================================ */
 const counters = document.querySelectorAll(".counter");
@@ -79,7 +106,6 @@ document.addEventListener("DOMContentLoaded", function () {
  * ✅ Lógica de Blog (API + UI)
  * ================================ */
 const API_URL = 'https://api.sheetbest.com/sheets/b69712ec-0c87-4695-9bd7-952f18b0b131';
-
 const loader = document.getElementById('loader');
 
 function showLoader() {
@@ -105,7 +131,6 @@ async function getPosts() {
 
 // HOME - Mostrar todos los posts
 const postsContainer = document.getElementById('posts-container');
-
 if (postsContainer) {
   (async () => {
     try {
@@ -123,7 +148,6 @@ if (postsContainer) {
       }
 
       const sortedPosts = data.sort((a, b) => new Date(b['Fecha']) - new Date(a['Fecha']));
-
       sortedPosts.forEach(post => {
         const titulo = post['Título'] || 'Sin título';
         const autor = post['Autor'] || 'Anónimo';
@@ -154,19 +178,16 @@ if (postsContainer) {
 
 // POST - Mostrar contenido individual del post
 const postHero = document.getElementById('post-hero');
-
 if (postHero) {
   (async () => {
     try {
       showLoader();
       const params = new URLSearchParams(window.location.search);
       const postId = params.get('id');
-
       const data = await getPosts();
       hideLoader();
 
       const post = data.find(item => item['ID'] === postId);
-
       if (post) {
         const title = document.getElementById('post-title');
         const author = document.getElementById('post-author');
@@ -211,3 +232,40 @@ if (postHero) {
     }
   })();
 }
+// ===============================
+// ✅ Cargar botón flotante en móvil desde wa-button.html
+// ===============================
+document.addEventListener("DOMContentLoaded", function () {
+  if (window.innerWidth <= 768) { // Solo para móvil
+    fetch('wa-button.html')
+      .then(res => res.text())
+      .then(html => {
+        const temp = document.createElement('div');
+        temp.innerHTML = html;
+        document.body.appendChild(temp.firstElementChild);
+
+        // Tracking para botón móvil
+        const btn = document.getElementById("whatsapp-btn-mobile");
+        if (btn) {
+          btn.addEventListener("click", function (e) {
+            e.preventDefault();
+            const url = btn.href;
+
+            gtag('event', 'conversion', {
+              'send_to': 'AW-17233902589/HmmZCP_u5OMaEP334ZlA',
+              'event_callback': function () {
+                window.location = url;
+              }
+            });
+
+            setTimeout(function () {
+              window.location = url;
+            }, 1000);
+
+            return false;
+          });
+        }
+      })
+      .catch(err => console.error("No se pudo cargar wa-button.html:", err));
+  }
+});
